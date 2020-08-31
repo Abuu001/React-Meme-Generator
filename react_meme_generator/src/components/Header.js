@@ -3,9 +3,13 @@ import React from "react"
  const Header=()=>{
     
     return(
-        <div>
-            <h3>kl</h3>
-        </div>
+       <header  className="header">
+           {/* <img 
+              src="http://i.imgflip.com/1bij.jpg"
+              alt ="meme photo"
+           /> */}
+           <p> MEME  GENERATOR</p>
+       </header>
     )
 }
      
