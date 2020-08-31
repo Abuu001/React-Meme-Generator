@@ -45,3 +45,37 @@
   justify-content: center;
   font-weight: bold;
 }
+.header >img{
+  width:70px;
+  object-fit: contain;
+  padding-right: 45px;
+}
+.meme_photo_disp{
+  margin: auto;
+  background-color:wheat;
+  border: 2px solid black;
+  width: 534px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.meme_photo_disp >img{
+  width: 334px;
+  height: 280px; 
+  object-fit: cover;
+}
+.topText{
+  position: absolute;
+  right: 200px;
+  top: 45px;
+  color: aliceblue;
+}
+.bottomText{
+  position: absolute;
+  right: 200px;
+  bottom: 45px;
+  color: aliceblue;
+  
+}

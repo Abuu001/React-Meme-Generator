@@ -4,10 +4,10 @@ import React from "react"
     
     return(
        <header  className="header">
-           {/* <img 
-              src="http://i.imgflip.com/1bij.jpg"
+           <img 
+              src="https://i.imgflip.com/16iyn1.jpg"
               alt ="meme photo"
-           /> */}
+           />
            <p> MEME  GENERATOR</p>
        </header>
     )
