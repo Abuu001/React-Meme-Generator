@@ -10,6 +10,7 @@ class MemeGenerator extends Component {
             allMemeImages:[]
         }
         this.memeChange=this.memeChange.bind(this)
+        this.btnChange=this.btnChange.bind(this)
     }
 
     componentDidMount(){ 
@@ -18,7 +19,7 @@ class MemeGenerator extends Component {
         .then(data=> data.json())
         .then(response=> {
             const {memes} = response.data
-            console.log(memes);
+            
             this.setState({
                 allMemeImages :  memes
             })
@@ -31,10 +32,21 @@ class MemeGenerator extends Component {
            [ name ]: value
         })
   }
+  btnChange=(event)=>{
+     event.preventDefault()
+
+     const randomNum = Math.floor(Math.random()* this.state.allMemeImages.length)
+     const randomMemeImg = this.state.allMemeImages[randomNum].url
+     console.log(randomMemeImg);
+    
+     this.setState({
+         randomImage : randomMemeImg
+     })
+  }
     render(){
         return(
             <div>
-               <form>
+               <form  onSubmit={this.btnChange}>
                    <input  type="text"  
                         placeholder=" Top text " 
                         name="topText"  
@@ -48,7 +60,7 @@ class MemeGenerator extends Component {
                         value={this.state.bottomText}  
                         onChange={this.memeChange}
                     />
-                   <button>Generate</button>
+                   <button  >Generate</button>
                </form>
 
                <div  className="meme_photo_disp">
